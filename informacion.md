@@ -15,7 +15,7 @@
 
   
   
-  **Proyecto a realizar:**
+  **Proyecto a realizar:** ReactJS 
   
   
 
@@ -122,11 +122,7 @@ git stash pop → Agregamos lo que tenemos en el stash a la rama nueva o la rama
 
 ### ANEXOS
 
-**Bootstrap**
 
-​	**Favicon**: 
-
-​	**Plantillas**: 
 
 
 
