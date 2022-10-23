@@ -5,7 +5,7 @@
 
 | Versión | Fecha      | Revisado y Aprobado por | Descripción del Cambio |
 | ------- | ---------- | ----------------------- | ---------------------- |
-| 1.0.0   | 12/10/2022 | Carlos Vasquez          | Versión inicial        |
+| 1.0.1   | 22/10/2022 | Carlos Vasquez          | Versión inicial        |
 
 
 ##  
@@ -15,7 +15,7 @@
 
   
   
-  **Proyecto a realizar:** ReactJS 
+  **Proyecto a realizar:**  Anexos proyect N° 9 Retos cientificos 
   
   
 
@@ -39,9 +39,13 @@ Tester - William Vasquez
 
 **RESOURCES**
 
-​	*Trello:* 
+*Git:*	https://github.com/ragnarok0498/MisionTIC-Grupo56-Ciclo4
 
-​	*Figma:* 
+*Trello:* [Ciclo 4 Historias de usuario | Trello](https://trello.com/b/uRMb3dO6/ciclo-4-historias-de-usuario)
+
+*MongoDB:* [Cloud: MongoDB Cloud](https://cloud.mongodb.com/v2/63113c3ebe931c3fd4983a13#clusters)
+
+*Drive:* [Grupo56 - Ciclo 4 MisionTIC UTP - Google Drive](https://drive.google.com/drive/u/1/folders/1TKoDheO8NKdNl992GmfRbK5Ku8AW6xSl)
 
 
 
@@ -90,6 +94,7 @@ git clone "url HTTPS repositorio"
 Se dejara por defecto una rama por default con el codigo principal que usemos:
 
 * **Main**.
+* **desarrollo**
 
 1. Para cambiar de ramas, con el comando
 
