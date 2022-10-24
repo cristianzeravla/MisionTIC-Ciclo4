@@ -13,16 +13,16 @@ import {
   InputGroupText,
   InputGroup,
   Container,
-  Col
+  Col,
 } from "reactstrap";
 
 // core components
-import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
-import TransparentFooter from "components/Footers/TransparentFooter.js";
+import IndexNavbar from "components/Navbars/IndexNavbar.js";
+import DarkFooter from "components/Footers/DarkFooter.js";
 
 function LoginPage() {
-  const [firstFocus, setFirstFocus] = React.useState(false);
-  const [lastFocus, setLastFocus] = React.useState(false);
+  const [emailFocus, setEmailFocus] = React.useState(false);
+  const [passFocus, setpassFocus] = React.useState(false);
   React.useEffect(() => {
     document.body.classList.add("login-page");
     document.body.classList.add("sidebar-collapse");
@@ -36,12 +36,13 @@ function LoginPage() {
   }, []);
   return (
     <>
-      <ExamplesNavbar />
+      <IndexNavbar />
       <div className="page-header clear-filter" filter-color="blue">
         <div
           className="page-header-image"
           style={{
-            backgroundImage: "url(" + require("assets/img/login.jpg") + ")"
+            backgroundImage:
+              "url(" + require("assets/img/fondo-login.jpg") + ")",
           }}
         ></div>
         <div className="content">
@@ -53,47 +54,46 @@ function LoginPage() {
                     <div className="logo-container">
                       <img
                         alt="..."
-                        src={require("assets/img/now-logo.png")}
+                        className="n-logo"
+                        src={require("assets/img/icono.ico")}
                       ></img>
                     </div>
                   </CardHeader>
                   <CardBody>
-                    <InputGroup
-                      className={
-                        "no-border input-lg" +
-                        (firstFocus ? " input-group-focus" : "")
-                      }
-                    >
-                      <InputGroupAddon addonType="prepend">
-                        <InputGroupText>
-                          <i className="now-ui-icons users_circle-08"></i>
-                        </InputGroupText>
-                      </InputGroupAddon>
-                      <Input
-                        placeholder="First Name..."
-                        type="text"
-                        onFocus={() => setFirstFocus(true)}
-                        onBlur={() => setFirstFocus(false)}
-                      ></Input>
-                    </InputGroup>
-                    <InputGroup
-                      className={
-                        "no-border input-lg" +
-                        (lastFocus ? " input-group-focus" : "")
-                      }
-                    >
-                      <InputGroupAddon addonType="prepend">
-                        <InputGroupText>
-                          <i className="now-ui-icons text_caps-small"></i>
-                        </InputGroupText>
-                      </InputGroupAddon>
-                      <Input
-                        placeholder="Last Name..."
-                        type="text"
-                        onFocus={() => setLastFocus(true)}
-                        onBlur={() => setLastFocus(false)}
-                      ></Input>
-                    </InputGroup>
+                  <InputGroup
+                    className={
+                      "no-border" + (emailFocus ? " input-group-focus" : "")
+                    }
+                  >
+                    <InputGroupAddon addonType="prepend">
+                      <InputGroupText>
+                        <i className="now-ui-icons ui-1_email-85"></i>
+                      </InputGroupText>
+                    </InputGroupAddon>
+                    <Input
+                      placeholder="Correo..."
+                      type="text"
+                      onFocus={() => setEmailFocus(true)}
+                      onBlur={() => setEmailFocus(false)}
+                    ></Input>
+                  </InputGroup>
+                  <InputGroup
+                    className={
+                      "no-border" + (passFocus ? " input-group-focus" : "")
+                    }
+                  >
+                    <InputGroupAddon addonType="prepend">
+                      <InputGroupText>
+                        <i className="now-ui-icons objects_key-25"></i>
+                      </InputGroupText>
+                    </InputGroupAddon>
+                    <Input
+                      placeholder="Clave..."
+                      type="text"
+                      onFocus={() => setpassFocus(true)}
+                      onBlur={() => setpassFocus(false)}
+                    ></Input>
+                  </InputGroup>
                   </CardBody>
                   <CardFooter className="text-center">
                     <Button
@@ -134,7 +134,7 @@ function LoginPage() {
             </Col>
           </Container>
         </div>
-        <TransparentFooter />
+        <DarkFooter />
       </div>
     </>
   );

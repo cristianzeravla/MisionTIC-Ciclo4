@@ -49,6 +49,18 @@ Tester - William Vasquez
 
 
 
+### Compilar proyecto
+
+En el visual Studios Code, Abriremos una nueva carpeta "seleccionamos la carpeta (proyecto) que esta en nuestro repositorio", despues en visual abrimos un terminal: en la barra superior de opciones buscamos terminal → nuevo terminar o (Ctrl + shift + ñ)
+
+```
+npm install → si sale algun error instamos con el siguiente comando 
+npm install --force
+npm start → para ejecutar la aplicacion
+```
+
+
+
 ### Comandos
 
 

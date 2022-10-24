@@ -13,9 +13,9 @@ import {
 } from "reactstrap";
 
 // core components
-import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
-import LandingPageHeader from "components/Headers/LandingPageHeader.js";
-import DefaultFooter from "components/Footers/DefaultFooter.js";
+import IndexHeader from "components/Headers/IndexHeader.js";
+import IndexNavbar from "components/Navbars/IndexNavbar.js";
+import DarkFooter from "components/Footers/DarkFooter.js";
 
 function LandingPage() {
   const [firstFocus, setFirstFocus] = React.useState(false);
@@ -33,9 +33,9 @@ function LandingPage() {
   }, []);
   return (
     <>
-      <ExamplesNavbar />
+      <IndexNavbar />
       <div className="wrapper">
-        <LandingPageHeader />
+        <IndexHeader />
         <div className="section section-about-us">
           <Container>
             <Row>
@@ -123,6 +123,7 @@ function LandingPage() {
             </div>
           </Container>
         </div>
+
         <div className="section section-team text-center">
           <Container>
             <h2 className="title">Here is our team</h2>
@@ -256,6 +257,7 @@ function LandingPage() {
             </div>
           </Container>
         </div>
+        
         <div className="section section-contact-us text-center">
           <Container>
             <h2 className="title">Want to work with us?</h2>
@@ -321,7 +323,7 @@ function LandingPage() {
             </Row>
           </Container>
         </div>
-        <DefaultFooter />
+        <DarkFooter />
       </div>
     </>
   );

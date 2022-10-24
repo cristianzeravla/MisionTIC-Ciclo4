@@ -23,6 +23,7 @@ function SignUp() {
   const [firstFocus, setFirstFocus] = React.useState(false);
   const [lastFocus, setLastFocus] = React.useState(false);
   const [emailFocus, setEmailFocus] = React.useState(false);
+  const [passFocus, setpassFocus] = React.useState(false);
   return (
     <>
       <div
@@ -42,33 +43,6 @@ function SignUp() {
                   <CardTitle className="title-up" tag="h3">
                     Sign Up
                   </CardTitle>
-                  <div className="social-line">
-                    <Button
-                      className="btn-neutral btn-icon btn-round"
-                      color="facebook"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fab fa-facebook-square"></i>
-                    </Button>
-                    <Button
-                      className="btn-neutral btn-icon btn-round"
-                      color="twitter"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                      size="lg"
-                    >
-                      <i className="fab fa-twitter"></i>
-                    </Button>
-                    <Button
-                      className="btn-neutral btn-icon btn-round"
-                      color="google"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fab fa-google-plus"></i>
-                    </Button>
-                  </div>
                 </CardHeader>
                 <CardBody>
                   <InputGroup
@@ -82,7 +56,7 @@ function SignUp() {
                       </InputGroupText>
                     </InputGroupAddon>
                     <Input
-                      placeholder="First Name..."
+                      placeholder="Nombres..."
                       type="text"
                       onFocus={() => setFirstFocus(true)}
                       onBlur={() => setFirstFocus(false)}
@@ -99,7 +73,7 @@ function SignUp() {
                       </InputGroupText>
                     </InputGroupAddon>
                     <Input
-                      placeholder="Last Name..."
+                      placeholder="Apellidos..."
                       type="text"
                       onFocus={() => setLastFocus(true)}
                       onBlur={() => setLastFocus(false)}
@@ -116,10 +90,27 @@ function SignUp() {
                       </InputGroupText>
                     </InputGroupAddon>
                     <Input
-                      placeholder="Email..."
+                      placeholder="Correo..."
                       type="text"
                       onFocus={() => setEmailFocus(true)}
                       onBlur={() => setEmailFocus(false)}
+                    ></Input>
+                  </InputGroup>
+                  <InputGroup
+                    className={
+                      "no-border" + (passFocus ? " input-group-focus" : "")
+                    }
+                  >
+                    <InputGroupAddon addonType="prepend">
+                      <InputGroupText>
+                        <i className="now-ui-icons objects_key-25"></i>
+                      </InputGroupText>
+                    </InputGroupAddon>
+                    <Input
+                      placeholder="Clave..."
+                      type="text"
+                      onFocus={() => setpassFocus(true)}
+                      onBlur={() => setpassFocus(false)}
                     ></Input>
                   </InputGroup>
                 </CardBody>
@@ -131,7 +122,7 @@ function SignUp() {
                     onClick={(e) => e.preventDefault()}
                     size="lg"
                   >
-                    Get Started
+                    Registrarse
                   </Button>
                 </CardFooter>
               </Form>
@@ -146,7 +137,7 @@ function SignUp() {
               size="lg"
               tag={Link}
             >
-              View Login Page
+              Iniciar sesion
             </Button>
           </div>
         </Container>

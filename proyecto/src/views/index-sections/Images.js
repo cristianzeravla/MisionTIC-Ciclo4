@@ -12,16 +12,16 @@ function Images() {
         <Container>
           <Row>
             <Col md="12">
-              <div className="hero-images-container">
+              <div className="hero-images-container-1">
                 <img
                   alt="..."
-                  src={require("assets/img/main-experimento1.png")}
+                  src={require("assets/img/ciencia-img.png")}
                 ></img>
               </div>
-              <div className="hero-images-container-2">
+              <div className="hero-images-container-3">
                 <img
                   alt="..."
-                  src={require("assets/img/main-experimento3.png")}
+                  src={require("assets/img/ensayos.png")}
                 ></img>
               </div>
             </Col>
