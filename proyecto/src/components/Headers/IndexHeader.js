@@ -43,8 +43,8 @@ function IndexHeader() {
             <h3>Este es un espacio en el que podremos aprender acerca del maravilloso mundo de la ciencia y podemos socializar acerca de ella</h3>
           </div>
           <h6 className="category category-absolute">
-            Designed by{" "}
-            . Coded by{" "}
+            Designed by {" Equipo 1 Grupo 56 "}
+            . Coded by Group {"Development"}
             <a target="_blank">
             </a>
             .

@@ -32,10 +32,10 @@ const [pills, setPills] = React.useState("1");
                     <NavItem>
                       <NavLink
                         className={pills === "1" ? "active" : ""}
-                        href="#pablo"
+                        href="#"
                         onClick={(e) => {
                           e.preventDefault();
-                          setPills("2");
+                          setPills("1");
                         }}
                       >
                         <i className="now-ui-icons location_world"></i>
@@ -44,6 +44,8 @@ const [pills, setPills] = React.useState("1");
                   </Nav>
                 </div>
               </Col>
+              <br></br>
+              <p>Este es el espacio en el que podemos averiguar cómo experimentar en el mundo de la ciencia, el espacio donde todo puede salir muy bien o muy mal.</p>
               <br></br>
               <TabContent className="gallery" activeTab={"pills" + pills}>
                 <TabPane tabId="pills1">
