@@ -16,18 +16,13 @@ function Navbars() {
     <>
       <div className="section section-team text-center">
           <Container>
-            <h2 className="title">Here is our team</h2>
+            <h2 className="title">Nuestro equipo</h2>
             <div className="team">
               <Row>
                 <Col md="4">
                   <div className="team-player">
-                    <img
-                      alt="..."
-                      className="rounded-circle img-fluid img-raised"
-                      src={require("assets/img/avatar.jpg")}
-                    ></img>
-                    <h4 className="title">Romina Hadid</h4>
-                    <p className="category text-info">Model</p>
+                    <h4 className="title">Catalina Vasquez</h4>
+                    <p className="category text-info">Gestora del Proyecto</p>
                     <p className="description">
                       You can write here details about one of your team members.
                       You can give more details about what they do. Feel free to
@@ -37,14 +32,6 @@ function Navbars() {
                       </a>{" "}
                       for people to be able to follow them outside the site.
                     </p>
-                    <Button
-                      className="btn-icon btn-round"
-                      color="info"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fab fa-twitter"></i>
-                    </Button>
                     <Button
                       className="btn-icon btn-round"
                       color="info"
@@ -61,17 +48,20 @@ function Navbars() {
                     >
                       <i className="fab fa-facebook-square"></i>
                     </Button>
+                    <Button
+                      className="btn-icon btn-round"
+                      color="info"
+                      href="#pablo"
+                      onClick={(e) => e.preventDefault()}
+                    >
+                      <i className="fab fa-linkedin"></i>
+                    </Button>
                   </div>
                 </Col>
                 <Col md="4">
                   <div className="team-player">
-                    <img
-                      alt="..."
-                      className="rounded-circle img-fluid img-raised"
-                      src={require("assets/img/ryan.jpg")}
-                    ></img>
-                    <h4 className="title">Ryan Tompson</h4>
-                    <p className="category text-info">Designer</p>
+                    <h4 className="title">William Vasquez</h4>
+                    <p className="category text-info">Desarrollador Backend</p>
                     <p className="description">
                       You can write here details about one of your team members.
                       You can give more details about what they do. Feel free to
@@ -87,7 +77,15 @@ function Navbars() {
                       href="#pablo"
                       onClick={(e) => e.preventDefault()}
                     >
-                      <i className="fab fa-twitter"></i>
+                      <i className="fab fa-instagram"></i>
+                    </Button>
+                    <Button
+                      className="btn-icon btn-round"
+                      color="info"
+                      href="#pablo"
+                      onClick={(e) => e.preventDefault()}
+                    >
+                      <i className="fab fa-facebook-square"></i>
                     </Button>
                     <Button
                       className="btn-icon btn-round"
@@ -101,11 +99,84 @@ function Navbars() {
                 </Col>
                 <Col md="4">
                   <div className="team-player">
-                    <img
-                      alt="..."
-                      className="rounded-circle img-fluid img-raised"
-                      src={require("assets/img/eva.jpg")}
-                    ></img>
+                    <h4 className="title">Cristian Alvarez</h4>
+                    <p className="category text-info">Desarrollador Frontend</p>
+                    <p className="description">
+                      You can write here details about one of your team members.
+                      You can give more details about what they do. Feel free to
+                      add some{" "}
+                      <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                        links
+                      </a>{" "}
+                      for people to be able to follow them outside the site.
+                    </p>
+                    <Button
+                      className="btn-icon btn-round"
+                      color="info"
+                      href="#pablo"
+                      onClick={(e) => e.preventDefault()}
+                    >
+                      <i className="fab fa-instagram"></i>
+                    </Button>
+                    <Button
+                      className="btn-icon btn-round"
+                      color="info"
+                      href="#pablo"
+                      onClick={(e) => e.preventDefault()}
+                    >
+                      <i className="fab fa-facebook-square"></i>
+                    </Button>
+                    <Button
+                      className="btn-icon btn-round"
+                      color="info"
+                      href="#pablo"
+                      onClick={(e) => e.preventDefault()}
+                    >
+                      <i className="fab fa-linkedin"></i>
+                    </Button>
+                  </div>
+                </Col>
+                <Col md="4">
+                  <div className="team-player">
+                    <h4 className="title">Yoraima Rincon</h4>
+                    <p className="category text-info">Gestora de Bases de datos</p>
+                    <p className="description">
+                      You can write here details about one of your team members.
+                      You can give more details about what they do. Feel free to
+                      add some{" "}
+                      <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                        links
+                      </a>{" "}
+                      for people to be able to follow them outside the site.
+                    </p>
+                    <Button
+                      className="btn-icon btn-round"
+                      color="info"
+                      href="#pablo"
+                      onClick={(e) => e.preventDefault()}
+                    >
+                      <i className="fab fa-instagram"></i>
+                    </Button>
+                    <Button
+                      className="btn-icon btn-round"
+                      color="info"
+                      href="#pablo"
+                      onClick={(e) => e.preventDefault()}
+                    >
+                      <i className="fab fa-facebook-square"></i>
+                    </Button>
+                    <Button
+                      className="btn-icon btn-round"
+                      color="info"
+                      href="#pablo"
+                      onClick={(e) => e.preventDefault()}
+                    >
+                      <i className="fab fa-linkedin"></i>
+                    </Button>
+                  </div>
+                </Col>
+                <Col md="4">
+                  <div className="team-player">
                     <h4 className="title">Eva Jenner</h4>
                     <p className="category text-info">Fashion</p>
                     <p className="description">
@@ -123,7 +194,7 @@ function Navbars() {
                       href="#pablo"
                       onClick={(e) => e.preventDefault()}
                     >
-                      <i className="fab fa-google-plus"></i>
+                      <i className="fab fa-instagram"></i>
                     </Button>
                     <Button
                       className="btn-icon btn-round"
@@ -131,7 +202,7 @@ function Navbars() {
                       href="#pablo"
                       onClick={(e) => e.preventDefault()}
                     >
-                      <i className="fab fa-youtube"></i>
+                      <i className="fab fa-facebook-square"></i>
                     </Button>
                     <Button
                       className="btn-icon btn-round"
@@ -139,7 +210,7 @@ function Navbars() {
                       href="#pablo"
                       onClick={(e) => e.preventDefault()}
                     >
-                      <i className="fab fa-twitter"></i>
+                      <i className="fab fa-linkedin"></i>
                     </Button>
                   </div>
                 </Col>

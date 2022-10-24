@@ -39,6 +39,10 @@ Tester - William Vasquez
 
 **RESOURCES**
 
+Plantilla: https://demos.creative-tim.com/now-ui-kit-react/#/index
+
+Archivo Plantilla: https://drive.google.com/file/d/1n5Xwxro9n5vwDZjHG1CdonNgtq0y9xL0/view?usp=sharing
+
 *Git:*	https://github.com/ragnarok0498/MisionTIC-Grupo56-Ciclo4
 
 *Trello:* [Ciclo 4 Historias de usuario | Trello](https://trello.com/b/uRMb3dO6/ciclo-4-historias-de-usuario)

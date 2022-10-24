@@ -125,7 +125,7 @@ function IndexNavbar() {
                   <p className="d-lg-none d-xl-none">Twitter</p>
                 </NavLink>
                 <UncontrolledTooltip target="#twitter-tooltip">
-                  Follow us on Twitter
+                Siguenos en Twitter
                 </UncontrolledTooltip>
               </NavItem>
               <NavItem>
@@ -138,7 +138,7 @@ function IndexNavbar() {
                   <p className="d-lg-none d-xl-none">Facebook</p>
                 </NavLink>
                 <UncontrolledTooltip target="#facebook-tooltip">
-                  Like us on Facebook
+                 Me gusta en Facebook
                 </UncontrolledTooltip>
               </NavItem>
               <NavItem>
@@ -151,7 +151,21 @@ function IndexNavbar() {
                   <p className="d-lg-none d-xl-none">Instagram</p>
                 </NavLink>
                 <UncontrolledTooltip target="#instagram-tooltip">
-                  Follow us on Instagram
+                  Siguenos en Instagram
+                </UncontrolledTooltip>
+              </NavItem>
+              <NavItem>
+                <NavLink
+                  to="/login-page"
+                  tag={Link}
+                  outline
+                  id="login-tooltip"
+                >
+                  <i className="fa fa-user-circle"></i>
+                  <p className="d-lg-none d-xl-none">Login</p>
+                </NavLink>
+                <UncontrolledTooltip target="#login-tooltip">
+                  Iniciar sesion
                 </UncontrolledTooltip>
               </NavItem>
             </Nav>
