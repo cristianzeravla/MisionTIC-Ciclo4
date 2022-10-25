@@ -46,6 +46,8 @@ build/
 ### VS Code ###
 .vscode/
 **/.vscode/
+/node_modules
+**/node_modules/
 
 # SVN
 .svn
