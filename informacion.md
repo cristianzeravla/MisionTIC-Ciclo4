@@ -8,14 +8,11 @@
 | 1.0.1   | 22/10/2022 | Carlos Vasquez          | Versión inicial        |
 
 
-##  
 
 ### Alcance
 - Manejo del repositorio para mayor control en el versionamiento en el proyecto asegurando un trabajo en equipo mas ordenado 
 
-  
-  
-  **Proyecto a realizar:**  Anexos proyect N° 9 Retos cientificos 
+  **Proyecto a realizar:**  Anexos proyectos N° 9 Retos cientificos 
   
   
 
@@ -34,6 +31,28 @@ Gestor base de datos - Yoraima Rincon
 Desarrollador frontend - Cristian Alvarez
 Desarrollador backend - 
 Tester - William Vasquez  
+
+
+
+**CONFIGURACION AMBIENTE DE DESARROLLO CON VISUAL STUDIOS CODE**
+
+1. Abrir carpeta en visual Code
+
+   1. File → Open folder → "Seleccionar carpeta (proyecto) en el repositorio clonado"
+
+      1. Deben aparecer las carpetas: public - src, y los archivos: .env - gulpfile.js, jsconfig.json - package.json
+
+   2. Terminal → New terminal:
+
+      1. Comando a ejecutar
+
+         1. npm install --force
+         2. npm audit fix --force
+         3. npm start
+
+         ***En caso de aparecer el error opensslErrorStack: [ 'error:03000086:digital envelope routines::initialization error' ], elimine la carpeta node_module que se encuentra dentro de la carpeta proyecto, desde tu visor de archivos "debe estar cerrado el VisualCode para no presentar fallos en la eliminacion".***
+
+         ***Despues vuelves a ejecutar los comandos desde el terminal del visualCode: npm install --force y npm start***
 
 
 
