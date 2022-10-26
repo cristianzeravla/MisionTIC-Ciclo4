@@ -40,7 +40,7 @@ function SignUp() {
               <Form action="" className="form" method="">
                 <CardHeader className="text-center">
                   <CardTitle className="title-up" tag="h3">
-                    Sign Up
+                    Inicio de sesion
                   </CardTitle>
                 </CardHeader>
                 <CardBody>
