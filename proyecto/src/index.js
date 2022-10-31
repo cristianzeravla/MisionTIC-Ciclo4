@@ -13,6 +13,7 @@ import Index from "views/Index.js";
 import LoginPage from "views/pages/LoginPage.js";
 import PanelPage from "views/pages/PanelPage.js";
 import ViewPost from "views/pages/ViewPost.js";
+import NewUser from "views/panel-sections/newUser.js";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -22,15 +23,16 @@ root.render(
       <Switch>
         <Route path="/index" render={(props) => <Index {...props} />} />
         <Route
-          path="/landing-page"
+          path="/panel"
           render={(props) => <PanelPage {...props} />}
         />
+        <Route path="/panel/newUser" render={(props) => <NewUser {...props} />} />
         <Route
-          path="/viewPost-page"
+          path="/viewPost"
           render={(props) => <ViewPost {...props} />}
         />
         <Route
-          path="/login-page"
+          path="/login"
           render={(props) => <LoginPage {...props} />}
         />
         <Redirect to="/index" />

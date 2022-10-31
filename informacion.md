@@ -47,7 +47,7 @@ Tester - William Vasquez
       1. Comando a ejecutar
 
          1. npm install --force
-         2. npm audit fix --force
+         2. npm audit fix --force (opcional)
          3. npm start
 
          ***En caso de aparecer el error opensslErrorStack: [ 'error:03000086:digital envelope routines::initialization error' ], elimine la carpeta node_module que se encuentra dentro de la carpeta proyecto, desde tu visor de archivos "debe estar cerrado el VisualCode para no presentar fallos en la eliminacion".***

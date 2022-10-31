@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 // reactstrap components
 import {
   Button,
@@ -105,6 +105,19 @@ function LoginPage() {
                       size="lg"
                     >
                       Iniciar sesion
+                    </Button>
+                  </CardFooter>
+                  <CardFooter className="text-center">
+                    <Button
+                      block
+                      className="btn-round"
+                      color="info"
+                      to="/panel"
+                      tag={Link}
+                      outline
+                      size="lg"
+                    >
+                      Panel de administracion
                     </Button>
                   </CardFooter>
                 </Form>

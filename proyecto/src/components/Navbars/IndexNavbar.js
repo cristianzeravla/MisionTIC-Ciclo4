@@ -85,7 +85,7 @@ function IndexNavbar() {
                 <DropdownToggle
                   caret
                   color="default"
-                  href="#pablo"
+                  href="#"
                   nav
                   onClick={(e) => e.preventDefault()}
                 >
@@ -109,15 +109,11 @@ function IndexNavbar() {
                     <i className="now-ui-icons business_chart-pie-36 mr-1"></i>
                     Nuestro equipo
                   </DropdownItem>
-                  <DropdownItem to="/index" tag={Link}>
-                    <i className="now-ui-icons business_chart-pie-36 mr-1"></i>
-                    Experimenta
-                  </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
               <NavItem>
                 <NavLink
-                  href="https://twitter.com/CreativeTim?ref=creativetim"
+                  href=""
                   target="_blank"
                   id="twitter-tooltip"
                 >
@@ -130,7 +126,7 @@ function IndexNavbar() {
               </NavItem>
               <NavItem>
                 <NavLink
-                  href="https://www.facebook.com/CreativeTim?ref=creativetim"
+                  href=""
                   target="_blank"
                   id="facebook-tooltip"
                 >
@@ -143,7 +139,7 @@ function IndexNavbar() {
               </NavItem>
               <NavItem>
                 <NavLink
-                  href="https://www.instagram.com/CreativeTimOfficial?ref=creativetim"
+                  href=""
                   target="_blank"
                   id="instagram-tooltip"
                 >
@@ -156,7 +152,7 @@ function IndexNavbar() {
               </NavItem>
               <NavItem>
                 <NavLink
-                  to="/login-page"
+                  to="/login"
                   tag={Link}
                   outline
                   id="login-tooltip"

@@ -1,5 +1,6 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
 // reactstrap components
 import {
   TabContent,
@@ -9,7 +10,8 @@ import {
   Nav,
   Container,
   Row,
-  Col
+  Col,
+  Button
 } from "reactstrap";
 
 // core components
@@ -79,6 +81,19 @@ const [pills, setPills] = React.useState("1");
                   </Col>
                 </TabPane>
               </TabContent>
+              <Col className="ml-auto mr-auto" md="6">
+                    <Button
+                      block
+                      className="btn-round"
+                      color="info"
+                      to="/viewPost"
+                      tag={Link}
+                      outline
+                      size="lg"
+                    >
+                      Ver publicacion
+                    </Button>
+              </Col>
             </Row>
           </Container>
       </div>

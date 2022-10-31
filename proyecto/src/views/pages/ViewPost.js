@@ -42,7 +42,8 @@ function ViewPost_page() {
       document.body.classList.remove("viewpost-page");
       document.body.classList.remove("sidebar-collapse");
     };
-  }, []);
+  },
+  );
   return (
     <>
       <IndexNavbar />
