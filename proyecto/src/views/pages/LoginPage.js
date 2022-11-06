@@ -24,6 +24,7 @@ function LoginPage() {
   const [emailFocus, setEmailFocus] = React.useState(false);
   const [passFocus, setpassFocus] = React.useState(false);
   React.useEffect(() => {
+    document.title = "Inicio de sesion"
     document.body.classList.add("login-page");
     document.body.classList.add("sidebar-collapse");
     document.documentElement.classList.remove("nav-open");

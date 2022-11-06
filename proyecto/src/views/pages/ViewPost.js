@@ -33,6 +33,7 @@ function ViewPost_page() {
         window.removeEventListener("scroll", updateScroll);
       };
     }
+    document.title = "Ver publicacion"
     document.body.classList.add("viewpost-page");
     document.body.classList.add("sidebar-collapse");
     document.documentElement.classList.remove("nav-open");
@@ -157,5 +158,4 @@ function ViewPost_page() {
     </>
   );
 }
-
 export default ViewPost_page;

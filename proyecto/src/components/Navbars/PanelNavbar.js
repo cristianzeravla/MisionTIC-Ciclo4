@@ -3,10 +3,6 @@ import { Link } from "react-router-dom";
 // reactstrap components
 import {
   Collapse,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  UncontrolledDropdown,
   NavbarBrand,
   Navbar,
   NavItem,
@@ -84,64 +80,49 @@ function IndexNavbar() {
             navbar
           >
             <Nav navbar>
-              <UncontrolledDropdown nav>
-                <DropdownToggle
-                  caret
-                  color="default"
-                  href="#"
-                  nav
-                  onClick={(e) => e.preventDefault()}
+              <NavItem>
+                <NavLink
+                  to="/panelUsuario"
+                  tag={Link}
+                  outline
+                  id="panelUser"
                 >
-                  <i className="now-ui-icons design_app mr-1"></i>
-                  <p>Agregar Registros</p>
-                </DropdownToggle>
-                <DropdownMenu>
-                  <DropdownItem to="/panel/newUser" tag={Link} outline>
-                    <i className="now-ui-icons business_chart-pie-36 mr-1"></i>
-                    Usuario administrador
-                  </DropdownItem>
-                  <DropdownItem to="" tag={Link}>
-                    <i className="now-ui-icons business_chart-pie-36 mr-1"></i>
-                    Publicar Experimento
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
-              <UncontrolledDropdown nav>
-                <DropdownToggle
-                  caret
-                  color="default"
-                  href="#"
-                  nav
-                  onClick={(e) => e.preventDefault()}
+                  <i className="now-ui-icons users_single-02"></i>
+                  <p>Usuarios</p>
+                </NavLink>
+                <UncontrolledTooltip target="#panelUser">
+                  Control usuarios
+                </UncontrolledTooltip>
+              </NavItem>
+              <NavItem>
+                <NavLink
+                  to="/panelPublicacion"
+                  tag={Link}
+                  outline
+                  id="panelPost"
                 >
-                  <i className="now-ui-icons design_app mr-1"></i>
-                  <p>Control Publicaciones</p>
-                </DropdownToggle>
-                <DropdownMenu>
-                  <DropdownItem to="" tag={Link}>
-                    <i className="now-ui-icons business_chart-pie-36 mr-1"></i>
-                    Editar entrada o cambiar estado
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
-              <UncontrolledDropdown nav>
-                <DropdownToggle
-                  caret
-                  color="default"
-                  href="#"
-                  nav
-                  onClick={(e) => e.preventDefault()}
+                  <i className="now-ui-icons files_single-copy-04"></i>
+                  <p>Publicaciones</p>
+                </NavLink>
+                <UncontrolledTooltip target="#panelPost">
+                  Control publiciones
+                </UncontrolledTooltip>
+              </NavItem>
+              <NavItem>
+                <NavLink
+                  to="/panelComentarios"
+                  tag={Link}
+                  outline
+                  id="panelComment"
                 >
-                  <i className="now-ui-icons design_app mr-1"></i>
-                  <p>Control Comentarios</p>
-                </DropdownToggle>
-                <DropdownMenu>
-                  <DropdownItem to="" tag={Link}>
-                    <i className="now-ui-icons business_chart-pie-36 mr-1"></i>
-                    Ver comentarios o cambiar estado
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
+                  <i className="now-ui-icons files_paper"></i>
+                  <p>Comentarios</p>
+                </NavLink>
+                <UncontrolledTooltip target="#panelComment">
+                  Control comentarios
+                </UncontrolledTooltip>
+              </NavItem>
+
               <NavItem>
                 <NavLink href="#" target="_blank" id="twitter-tooltip">
                   <i className="fab fa-twitter"></i>
@@ -171,7 +152,7 @@ function IndexNavbar() {
               </NavItem>
               <NavItem>
                 <NavLink to="/login" tag={Link} outline id="login-tooltip">
-                  <i className="fa fa-user-circle"></i>
+                  <i className="now-ui-icons sport_user-run"></i>
                   <p className="d-lg-none d-xl-none">Logout</p>
                 </NavLink>
                 <UncontrolledTooltip target="#login-tooltip">

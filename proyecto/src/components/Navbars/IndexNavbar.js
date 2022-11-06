@@ -157,7 +157,7 @@ function IndexNavbar() {
                   outline
                   id="login-tooltip"
                 >
-                  <i className="fa fa-user-circle"></i>
+                  <i className="now-ui-icons users_single-02"></i>
                   <p className="d-lg-none d-xl-none">Login</p>
                 </NavLink>
                 <UncontrolledTooltip target="#login-tooltip">

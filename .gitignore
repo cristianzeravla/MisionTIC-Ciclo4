@@ -14,7 +14,8 @@
 #
 
 /proyecto/node_modules
-/proyecto/package-lock.json"
+/proyecto/package-lock.json
+/proyecto/yarn.lock
 
 # Java
 *.class

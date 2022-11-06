@@ -13,7 +13,10 @@ import Index from "views/Index.js";
 import LoginPage from "views/pages/LoginPage.js";
 import PanelPage from "views/pages/PanelPage.js";
 import ViewPost from "views/pages/ViewPost.js";
-import NewUser from "views/panel-sections/newUser.js";
+//import NewUser from "views/panel-sections/newUser.js";
+import NewUser from "views/panel-sections/User.js";
+import NewPost from "views/panel-sections/Post"
+import NewComment from "views/panel-sections/Comments.js";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -26,10 +29,21 @@ root.render(
           path="/panel"
           render={(props) => <PanelPage {...props} />}
         />
-        <Route path="/panel/newUser" render={(props) => <NewUser {...props} />} />
         <Route
           path="/viewPost"
           render={(props) => <ViewPost {...props} />}
+        />
+        <Route
+          path="/panelUsuarios"
+          render={(props) => <NewUser {...props} />}
+        />
+        <Route
+          path="/panelPublicacion"
+          render={(props) => <NewPost {...props} />}
+        />
+        <Route
+          path="/panelComentarios"
+          render={(props) => <NewComment {...props} />}
         />
         <Route
           path="/login"

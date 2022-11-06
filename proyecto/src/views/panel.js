@@ -10,6 +10,8 @@ import SignUp from "./panel-sections/SignUp.js";
 
 function Panel() {
   React.useEffect(() => {
+    document.title = "Panel de administracion"
+
     document.body.classList.add("index-page");
     document.body.classList.add("sidebar-collapse");
     document.documentElement.classList.remove("nav-open");

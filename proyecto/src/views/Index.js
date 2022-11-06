@@ -1,9 +1,4 @@
 import React from "react";
-
-// reactstrap components
-// import {
-// } from "reactstrap";
-
 // core components
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import IndexHeader from "components/Headers/IndexHeader.js";
@@ -15,8 +10,11 @@ import Experimenta from "./index-sections/experimentos";
 import Team from "./index-sections/team.js";
 
 
+
 function Index() {
+  //const TITLE = "Pagina principal";
   React.useEffect(() => {
+    document.title = "La ciencia de manera divertida"
     document.body.classList.add("index-page");
     document.body.classList.add("sidebar-collapse");
     document.documentElement.classList.remove("nav-open");
