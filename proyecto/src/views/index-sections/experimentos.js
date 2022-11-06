@@ -59,11 +59,40 @@ const [pills, setPills] = React.useState("1");
                           className="img-raised"
                           src={require("assets/img/bg1.jpg")}
                         ></img>
+                        <Button
+                          block
+                          className="btn-round "
+                          color="info"
+                          to="/viewPost"
+                          tag={Link}
+                          outline
+                          size="sm"
+                        >
+                        <i className="now-ui-icons arrows-1_minimal-up">
+                        </i>
+                        <br></br>
+                        Ver publicacion
+                      </Button>
+                      
                         <img
                           alt="..."
                           className="img-raised"
                           src={require("assets/img/bg3.jpg")}
                         ></img>
+                        <Button
+                          block
+                          className="btn-round"
+                          color="info"
+                          to="/viewPost"
+                          tag={Link}
+                          outline
+                          size="sm"
+                        >
+                        <i className="now-ui-icons arrows-1_minimal-up">
+                        </i>
+                        <br></br>
+                        Ver publicacion
+                        </Button>
                       </Col>
                       <Col md="6">
                         <img
@@ -71,28 +100,46 @@ const [pills, setPills] = React.useState("1");
                           className="img-raised"
                           src={require("assets/img/bg8.jpg")}
                         ></img>
+                        <Button
+                          block
+                          className="btn-round"
+                          color="info"
+                          to="/viewPost"
+                          tag={Link}
+                          outline
+                          size="sm"
+                        >
+                        <i className="now-ui-icons arrows-1_minimal-up">
+                        </i>
+                        <br></br>
+                        Ver publicacion
+                        </Button>
                         <img
                           alt="..."
                           className="img-raised"
                           src={require("assets/img/bg7.jpg")}
                         ></img>
+                        <Button
+                          block
+                          className="btn-round"
+                          color="info"
+                          to="/viewPost"
+                          tag={Link}
+                          outline
+                          size="sm"
+                        >
+                        <i className="now-ui-icons arrows-1_minimal-up">
+                        </i>
+                        <br></br>
+                        Ver publicacion
+                    </Button>
                       </Col>
                     </Row>
                   </Col>
                 </TabPane>
               </TabContent>
               <Col className="ml-auto mr-auto" md="6">
-                    <Button
-                      block
-                      className="btn-round"
-                      color="info"
-                      to="/viewPost"
-                      tag={Link}
-                      outline
-                      size="lg"
-                    >
-                      Ver publicacion
-                    </Button>
+                    
               </Col>
             </Row>
           </Container>
