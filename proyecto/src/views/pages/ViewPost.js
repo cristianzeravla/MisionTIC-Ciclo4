@@ -70,24 +70,36 @@ function ViewPost_page() {
           </Container>
         </div>
 
-        <div className="section">
+        <div className="section section-descripcion">
           <Container>
-            <h3 className="title">¿Que necesitamos?</h3>
+            <h3 className="title text-center">¿Que necesitamos?</h3>
+            <h5 className="description">
+              Lorem ipsum dolor sit amet, consect et elementum. Lorem ipsum
+              dolor sit amet, consect
+            </h5>
+            
+              <p><strong>Paso a paso</strong></p>
+              <p>Lorem ipsum dolor sit amet, consect</p>
+              <br></br>
+              <p><strong>Recursos</strong></p>
+            
+          </Container>
+        </div>
+        <div className="section section-comentarios text-center">
+          <Container>
+            <h3 className="title"> Comentarios </h3>
             <h5 className="description">
               Lorem ipsum dolor sit amet, consect et elementum. Lorem ipsum
               dolor sit amet, consect
             </h5>
             <Row>
-              <Col className="ml-auto mr-auto" md="6">
-                <h4 className="title text-center">Comentarios</h4>
-                <div className="nav-align-center"></div>
-              </Col>
+
             </Row>
           </Container>
         </div>
         <div className="section section-contact-us text-center">
           <Container>
-            <h2 className="title">¿Quieres enviar un comentario?</h2>
+            <h3 className="title">¿Quieres enviar un comentario?</h3>
             <p className="description">
               Para nosotros es importante sabes tu punto de vista y aportes para
               este experimento
