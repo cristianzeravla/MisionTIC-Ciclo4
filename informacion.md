@@ -54,6 +54,13 @@ Tester - William Vasquez
 
          ***Despues vuelves a ejecutar los comandos desde el terminal del visualCode: npm install --force y npm start***
 
+<title> </title>
+
+<h4>Dependencias extras a instalar</h4>
+
+1. Ejecutar en terminal de VS Code
+   1. yarn add react-select
+
 
 
 **RESOURCES**

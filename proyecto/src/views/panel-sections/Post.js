@@ -121,11 +121,19 @@ function Publicacion() {
                     enlaces o emoji
                   </div>
                   <br></br>
+                  <label for="inputRecursos" className="control-label">
+                    Recursos adicionales
+                  </label>
+                  <Input type="url" placeholder="Ingrese una url del experimento" aria-describedby="recursosHelp" id="inputRecursos" class="form-control"/>
+                  <div class="text-control" className="text-danger" id="inputRecursos">
+                    * Debe agregar un enlace que contenga informacion adicional del experimento a publicar
+                  </div>
+                  <br></br>
                   <div class="mb-3">
                     <label for="formFile" class="form-label">
                       Seleccione una imagen
                     </label>
-                    <input class="form-control" type="file" id="formFile" aria-describedby="imagenHelp" />
+                    <input class="form-control" type="file" id="formFile" aria-describedby="imagenHelp" accept=".jpg, .png, .jpeg" />
                     <div id="imagenHelp" class="form-text" className="text-danger">
                       * Los formatos admitidos son JPG, PNG y JPEG
                     </div>
