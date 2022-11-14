@@ -14,7 +14,7 @@
 
   **Proyecto a realizar:**  Anexos proyectos N° 9 Retos cientificos 
   
-  
+   	
 
 **TEAM**
 
@@ -59,7 +59,13 @@ Tester - William Vasquez
 <h4>Dependencias extras a instalar</h4>
 
 1. Ejecutar en terminal de VS Code
-   1. yarn add react-select
+   1. ```bash
+       yarn add react-select
+      ```
+   
+   2. ```bash
+       yarn add semantic-ui-react semantic-ui-css
+      ```
 
 
 

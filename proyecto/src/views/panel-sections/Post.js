@@ -6,7 +6,9 @@ import {
   Button, 
   Input, 
   Row,
-  Col
+  Col,
+  NavLink,
+  UncontrolledTooltip
 } from "reactstrap";
 
 import Select from "react-select";
@@ -158,6 +160,7 @@ function Publicacion() {
                     <th scope="col">Categoria</th>
                     <th scope="col">Resumen</th>
                     <th scope="col">Descripcion</th>
+                    <th scope="col">Recursos</th>
                     <th scope="col">Opciones</th>
                   </tr>
                 </thead>
@@ -168,6 +171,14 @@ function Publicacion() {
                     <td>test</td>
                     <td>Se agrega un resumen para la publicacion</td>
                     <td>Aqui se ingresa el texto completo</td>
+                    <td>
+                      <NavLink href="https://aofirs.org/articles/google-dork-list" id="enlaces" target="_blank">
+                        Enlaces
+                      </NavLink>
+                      <UncontrolledTooltip target="#enlaces">
+                        Recursos del experimento
+                      </UncontrolledTooltip>
+                    </td>
                     <td>
                       <Button
                         className="btn-icon btn-round"
