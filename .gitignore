@@ -13,9 +13,13 @@
 #             | -> ...
 #
 
-/proyecto/node_modules
-/proyecto/package-lock.json
-/proyecto/yarn.lock
+/Desarrollo/proyecto/node_modules
+/Desarrollo/proyecto/package-lock.json
+/Desarrollo/proyecto/yarn.lock
+
+/Desarrollo/node_modules
+/Desarrollo/package-lock.json
+/Desarrollo/yarn.lock
 
 # Java
 *.class

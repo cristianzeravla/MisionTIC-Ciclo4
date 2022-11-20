@@ -67,6 +67,44 @@ Tester - William Vasquez
        yarn add semantic-ui-react semantic-ui-css
       ```
 
+- ```bash
+  npm install express
+  ```
+
+- ```bash
+  npm install nodemon
+  ```
+
+- ```bash
+  npm install mongoose
+  ```
+
+- ```bash
+  npm install uniqid --force 
+  ```
+
+- ```bash
+  npm install axios --force 
+  ```
+
+- ```bash
+  npm install body-parser
+  ```
+
+
+
+### Iniciar servidor
+
+​	Se deben ubicar en la ruta "\MisionTIC-Grupo56-Ciclo4\Desarrollo" en su VS-Code y en el terminal ingresan este comando antes de arrancar el front
+
+- ```
+  node server.js
+  ```
+
+​	Para validar la conexion al back visiten la url 
+
+http://localhost:5000/
+
 
 
 **RESOURCES**
