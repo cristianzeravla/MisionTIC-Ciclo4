@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 import uniquid from 'uniqid';
 import axios from 'axios';
+import Swal from "sweetalert2";
+
 // reactstrap components
 import { 
   Container, 
@@ -45,11 +47,23 @@ function Publicacion() {
     axios.post('api/entradas/sendPost', entrada)
     .then(res => {
       alert(res.data)
+      Swal.fire({
+        icon: 'success',
+        title: 'La publicación se registró con éxito.',
+        showConfirmButton: false,
+        timer: 1500
+      })
     })
+      
     .then(err => {
       console.log(err)
-      alert('Error al crear entrada')
+      Swal.fire({
+        icon: 'error',
+        title: 'Lo siento...',
+        text: 'No se pudo crear la publicación.'
+      })
     })
+
   }
 
   const Checkbox = ({ children, ...props }: JSX.IntrinsicElements['input']) => (

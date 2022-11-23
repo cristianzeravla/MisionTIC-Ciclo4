@@ -1,6 +1,7 @@
 import React, {useState } from "react";
 import uniqid from "uniqid";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 import {
     Container,
@@ -21,6 +22,7 @@ function Usuarios(){
     const[password, setPassword] = useState('');
     //const[password1, setPassword1] = useState('');
 
+    
     function sendUser(){
         var usuario = {
             nombre: nombre,
@@ -33,13 +35,21 @@ function Usuarios(){
 
         axios.post('api/usuarios/sendUser', usuario)
         .then(res => {
-            alert(res.data)
-            alert('Usuario creado con exito')
+            Swal.fire({
+                icon: 'success',
+                title: 'El usuario se registró con éxito.',
+                showConfirmButton: false,
+                timer: 1500
+                })
             console.log(res.data)
         })
         .the(err => {
             console.log(err)
-            alert('Error al crear usuario')
+            Swal.fire({
+                icon: 'error',
+                title: 'Lo siento...',
+                text: 'Error al crear usuario.'
+            })
         })
     }
 
@@ -162,7 +172,6 @@ function Usuarios(){
 
 export default Usuarios;
 /*
-
 <label className="form-label" for="inputPassword1">
                                 Confirmar contraseña
                             </label>
