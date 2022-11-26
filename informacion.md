@@ -91,6 +91,10 @@ Tester - William Vasquez
   npm install body-parser
   ```
 
+- ```bash
+  npm install sweetalert2 --force
+  ```
+
 
 
 ### Iniciar servidor

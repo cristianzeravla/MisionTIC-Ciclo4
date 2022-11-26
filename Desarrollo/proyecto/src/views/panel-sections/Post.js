@@ -32,40 +32,6 @@ function Publicacion() {
   //const[estado, setEstado] = React.useState('')
 
 
-  function sendPost(){
-    var entrada = {
-      titulo: titulo,
-      resumen: resumen,
-      categoria: categoria,
-      descripcion: descripcion,
-      recursos: recursos,
-      imagen: imagen,
-      identrada: uniquid()
-    }
-    console.log(entrada)
-
-    axios.post('api/entradas/sendPost', entrada)
-    .then(res => {
-      alert(res.data)
-      Swal.fire({
-        icon: 'success',
-        title: 'La publicación se registró con éxito.',
-        showConfirmButton: false,
-        timer: 1500
-      })
-    })
-      
-    .then(err => {
-      console.log(err)
-      Swal.fire({
-        icon: 'error',
-        title: 'Lo siento...',
-        text: 'No se pudo crear la publicación.'
-      })
-    })
-
-  }
-
   const Checkbox = ({ children, ...props }: JSX.IntrinsicElements['input']) => (
     <label style={{ marginRight: '1em' }}>
       <input type="checkbox" {...props} />
@@ -194,7 +160,7 @@ function Publicacion() {
                   </div>
 
                   <Button color="info">Limpiar</Button>
-                  <Button color="success" onClick={sendPost}>Publicar</Button>
+                  <Button color="success" >Publicar</Button>
                 </Form>
               </Row>
             </div>

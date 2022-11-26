@@ -22,36 +22,6 @@ function Usuarios(){
     const[password, setPassword] = useState('');
     //const[password1, setPassword1] = useState('');
 
-    
-    function sendUser(){
-        var usuario = {
-            nombre: nombre,
-            apellido: apellido,
-            correo: correo,
-            password: password,
-            idusuario: uniqid()
-        }
-        console.log(usuario)
-
-        axios.post('api/usuarios/sendUser', usuario)
-        .then(res => {
-            Swal.fire({
-                icon: 'success',
-                title: 'El usuario se registró con éxito.',
-                showConfirmButton: false,
-                timer: 1500
-                })
-            console.log(res.data)
-        })
-        .the(err => {
-            console.log(err)
-            Swal.fire({
-                icon: 'error',
-                title: 'Lo siento...',
-                text: 'Error al crear usuario.'
-            })
-        })
-    }
 
     React.useEffect(() => {
         document.title = "Panel Usuarios"
@@ -124,7 +94,7 @@ function Usuarios(){
                             <br></br> 
                                 
                             <Button color="info">Limpiar</Button>
-                            <Button color="success" onClick={sendUser}>Registrarse</Button>
+                            <Button color="success">Registrarse</Button>
                         </Form>
                     </Row>
                 </Container>
