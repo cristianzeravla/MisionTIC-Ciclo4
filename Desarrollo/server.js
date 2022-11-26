@@ -24,6 +24,15 @@ app.get('/', (req, res) => {
     res.send('Welcome to my API')
 })
 
+//cors
+const cors = require('cors');
+
+const whiteList = ["http://localhost:3000", "http://localhost:3001"];
+ 
+app.use(cors({
+    origin: whiteList
+}));
+
 /*
 const express = require('express')
 const app = express()

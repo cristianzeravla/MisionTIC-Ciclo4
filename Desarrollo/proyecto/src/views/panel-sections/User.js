@@ -31,11 +31,42 @@ class Usuarios extends Component {
         }
     }
 
+<<<<<<< HEAD
     peticionGet = () => {
         axios.get(url).then(response => {
             this.setState({data: response.data});
         }).catch(error => {
             console.log(error.message);
+=======
+    
+    function sendUser(){
+        var usuario = {
+            nombre: nombre,
+            apellido: apellido,
+            correo: correo,
+            password: password,
+            idusuario: uniqid()
+        }
+        console.log(usuario)
+
+        axios.post('api/usuarios/sendUser', usuario)
+        .then(res => {
+            Swal.fire({
+                icon: 'success',
+                title: 'El usuario se registró con éxito.',
+                showConfirmButton: false,
+                timer: 1500
+                })
+            console.log(res.data)
+        })
+        .the(err => {
+            console.log(err)
+            Swal.fire({
+                icon: 'error',
+                title: 'Lo siento...',
+                text: 'Error al crear usuario.'
+            })
+>>>>>>> b90d9b73ad6b8fc7d152626ccfe30c5e5886637c
         })
     }
 
@@ -194,10 +225,104 @@ class Usuarios extends Component {
                     </Container>
                 </div>
             </div>
+<<<<<<< HEAD
             <DarkFooter />
             </>
         );
     }
+=======
+            <div className="section section-formulario">
+                <Container>
+                    <div id="inputs">
+                        <h3><strong> Usuarios </strong></h3>
+                    </div>
+                    <p className="category"> Agregar nuevo usuario</p>
+                    <Row>
+                        <Form>
+                            <label for ="inputNombre" className="form-label">
+                                Nombre
+                            </label> 
+                            <input type="text" className="form-control" id="inputNombre" aria-describedby="nombreHelp" placeholder="Ingrese su nombre" 
+                            value={nombre} onChange={(e) => {setNombre(e.target.value)}}/>
+                            <div className="text-danger" id="nombreHelp" class="form-text">
+                                * Este campo es obligatorio
+                            </div>
+                            <br></br>
+                            <label for="inputApellido" className="form-label" value="Apellido">
+                                Apellido
+                            </label>
+                            <input type="text" className="form-control" id="inputApellido" aria-describedby="apellidoHelp" placeholder="Ingrese sus apellidos" 
+                            value={apellido} onChange={(e) => {setApellido(e.target.value)}}/> 
+                            <div class="form-text" className="text-danger" id="apellidoHelp">
+                                * Este campo es obligatorio
+                            </div>
+                            <br></br>
+                            <label className="form-label" form="inputEmail"> 
+                                Correo
+                            </label>
+                            <input type="email" id="inputEmail" aria-describedby="emailHel" className="form-control" placeholder="Ingrese un correo electronico valido" 
+                            value={correo} onChange={(e) => {setCorreo(e.target.value)}}/>
+                            <div class="form-text" className="text-danger" id="emailHelp">
+                                * Este campo es obligatorio
+                            </div> 
+                            <br></br> 
+                            <label className="form-label" for="inputPassword">
+                                Contraseña
+                            </label>
+                            <br></br>
+                            <input className="form-control" id="inputPassword" type="password" placeholder="Ingrese una contraseña" aria-describedby="passwordHelp"
+                            value={password} onChange={(e) => {setPassword(e.target.value)}}/>  
+                            <div className="text-danger" id="passwordHelp" class="form-text">
+                                * La contraseña debe tener entre 4 a 12 caracteres    
+                            </div> 
+                            <br></br> 
+                                
+                            <Button color="info">Limpiar</Button>
+                            <Button color="success" onClick={sendUser}>Registrarse</Button>
+                        </Form>
+                    </Row>
+                </Container>
+            </div>
+            <div className="section section-tables-active">
+                <Container>
+                    <p className="category" name="t_Usuarios" value="Tabla de usuarios registrador"/>
+                    <Row>
+                        <table class="table">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Apellido</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Opciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Carlos</td>
+                                    <td>Vasquez</td>
+                                    <td>email@email.com</td>
+                                    <td>
+                                    <Button className="btn-icon btn-round" color="warning" type="button">
+                                        <i className="now-ui-icons ui-2_favourite-28"></i>
+                                    </Button>
+                                    <Button className="btn-icon btn-round" color="info" type="button">
+                                        <i className="now-ui-icons ui-2_favourite-28"></i>
+                                    </Button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tfooter>
+                                
+                            </tfooter>
+                        </table> 
+                    </Row>
+                </Container>
+            </div>
+        </div>
+        <DarkFooter />
+        </>
+    );
+>>>>>>> b90d9b73ad6b8fc7d152626ccfe30c5e5886637c
 }
 
 export default Usuarios;
