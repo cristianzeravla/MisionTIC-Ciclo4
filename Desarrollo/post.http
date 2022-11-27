@@ -3,11 +3,11 @@ POST http://localhost:5000/api/posts HTTP/1.1
 Content-type: application/json
 
 {
-    "titulo": "Titulo de prueba",
-    "resumen": "Resumen de prueba",
-    "categoria": "Categoria de prueba",
-    "descripcion": "Descripcion de prueba",
-    "recursos": "Recursos de prueba",
-    "imagen": "Image de prueba",
+    "titulo": "Titulo de prueba25",
+    "resumen": "Resumen de prueba5",
+    "categoria": "Categoria de prueba25",
+    "descripcion": "Descripcion de prueba25",
+    "recursos": "Recursos de prueba25",
+    "imagen": "Image de prueba25",
     "estado": "0"
 }

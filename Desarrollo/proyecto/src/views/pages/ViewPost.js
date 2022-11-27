@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { Comment } from "semantic-ui-react";
+import Swal from "sweetalert2";
 
 // reactstrap components
 import {
@@ -21,12 +22,83 @@ import axios from 'axios';
 //import CommentSections from "views/panel-sections/CommentSections.js";
 let pageHeader = React.createRef();
 
-<<<<<<< HEAD
+const url="http://localhost:5000/api/comments";
+const url2="http://localhost:5000/api/posts";
 
 class ViewPost_page extends Component {
 
-  render() {
+  state={
+    data:[],
+    form:{
+      nombre: '',
+      apellido: '',
+      correo: '',
+      comentario: ''
+   }
+  }
 
+  state2={
+    data2:[],
+    form2:{
+      titulo: '',
+      resumen: '',
+      categoria: '',
+      descripcion: '',
+      recursos: ''
+    }
+  }
+
+
+  peticionGetPost = () => {
+    axios.get(url2).then(response => {
+      this.setState({data2: response.data2});
+    }).catch(error => {
+      console.log(error.message);
+    })
+  }
+  
+  peticionGet=()=>{
+    axios.get(url).then(response=>{
+      this.setState({data: response.data});
+    }).catch(error=>{
+      console.log(error.message);
+    })
+  }
+  
+  peticionPost=async()=>{
+    await axios.post(url,this.state.form).then(response=>{
+        this.peticionGet();
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: 'Comentario enviado',
+          showConfirmButton: false,
+          timer: 1500
+        })
+      }).catch(error=>{
+        console.log(error.message);
+      })
+  }
+
+
+  handleChange=async e=>{
+    e.persist();
+    await this.setState({
+      form:{
+        ...this.state.form,
+        [e.target.name]: e.target.value
+      }
+    });
+    console.log(this.state.form);
+    }
+
+  componentDidMount() {
+    this.peticionGet();
+  }
+
+
+  render() {
+    const { form } = this.state;
     return (
       <>
         <IndexNavbar />
@@ -83,37 +155,20 @@ class ViewPost_page extends Component {
             <Container>
               <h3 className="title text-center" dividing> Comentarios </h3>
               <Comment.Group>
-                <Comment>
-                  <Comment.Avatar src="https://react.semantic-ui.com/images/avatar/small/joe.jpg" />
-                  <Comment.Content>
-                    <Comment.Author as="a">Joe Henderson</Comment.Author>
-                    <Comment.Text>
-                      Dude, this is awesome. Thanks so much
-                    </Comment.Text>
-                  </Comment.Content>
-                </Comment>
-                <br></br>
-  
-                <Comment>
-                  <Comment.Avatar src="https://react.semantic-ui.com/images/avatar/small/matt.jpg" />
-                  <Comment.Content>
-                    <Comment.Author as="a">Matt</Comment.Author>
-                    <Comment.Text>
-                      This has been very useful for my research. Thanks as well!
-                    </Comment.Text>
-                  </Comment.Content>
-                </Comment>
-                <br></br>
-  
-                <Comment>
-                  <Comment.Avatar src="https://react.semantic-ui.com/images/avatar/small/jenny.jpg" />
-                  <Comment.Content>
-                    <Comment.Author as="a">Jenny Hess</Comment.Author>
-                    <Comment.Text>Elliot you are always so right :)</Comment.Text>
-                  </Comment.Content>
-                </Comment>
-                <br></br>
-  
+              {this.state.data.map(comment => {
+                return (
+                  <Comment>
+                    <Comment.Avatar src='https://react.semantic-ui.com/images/avatar/small/matt.jpg' />
+                    <Comment.Content>
+                      <Comment.Author as='a'>{comment.nombre} {comment.apellido}</Comment.Author>
+                      <Comment.Metadata>
+                        <div>{comment.correo}</div>
+                      </Comment.Metadata>
+                      <Comment.Text>{comment.comentario}</Comment.Text>
+                    </Comment.Content>
+                  </Comment>
+                )
+              })}
               </Comment.Group>
             </Container>
           </div>
@@ -122,7 +177,7 @@ class ViewPost_page extends Component {
             <Container>
               <h3 className="title">¿Quieres enviar un comentario?</h3>
               <p className="description">
-                Para nosotros es importante sabes tu punto de vista y aportes para
+                Para nosotros es importante saber tu punto de vista y aportes para
                 este experimento
               </p>
               <Row>
@@ -134,8 +189,25 @@ class ViewPost_page extends Component {
                       </InputGroupText>
                     </InputGroupAddon>
                     <Input
+                      name="nombre"
                       placeholder="Nombres..."
                       type="text"
+                      onChange={this.handleChange}
+                      value={form.nombre}
+                    ></Input>
+                  </InputGroup>
+                  <InputGroup>
+                    <InputGroupAddon addonType="prepend">
+                      <InputGroupText>
+                        <i className="now-ui-icons users_circle-08"></i>
+                      </InputGroupText>
+                    </InputGroupAddon>
+                    <Input
+                      name="apellido"
+                      placeholder="Apellidos..."
+                      type="text"
+                      onChange={this.handleChange}
+                      value={form.apellido}
                     ></Input>
                   </InputGroup>
                   <InputGroup>
@@ -145,8 +217,11 @@ class ViewPost_page extends Component {
                       </InputGroupText>
                     </InputGroupAddon>
                     <Input
+                      name="correo"
                       placeholder="Correo..."
                       type="email"
+                      onChange={this.handleChange}
+                      value={form.correo}
                     ></Input>
                   </InputGroup>
                   <div className="textarea-container">
@@ -156,15 +231,18 @@ class ViewPost_page extends Component {
                       placeholder="Escribe tu comentario..."
                       rows="4"
                       type="textarea"
+                      onChange={this.handleChange}
+                      value={form.comentario}
                     ></Input>
                   </div>
                   <div className="send-button">
                     <Button
+                      onClick={()=>this.peticionPost()}
                       block
                       className="btn-round"
                       color="info"
                       href="#"
-                      onClick={(e) => e.preventDefault()}
+                      //onClick={(e) => e.preventDefault()}
                       size="lg"
                     >
                       Enviar comentario
